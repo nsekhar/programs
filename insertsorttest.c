@@ -27,6 +27,7 @@ int main()
 	printarray(a, i - 1);
 
 	free(a);
+	fclose(f);
 
 	return 0;
 }
