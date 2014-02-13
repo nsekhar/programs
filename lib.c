@@ -14,6 +14,7 @@ void swap(int *a, int *b)
 	*b = tmp;
 }
 
+#ifdef DEBUG
 void printarray(int a[], int n)
 {
 	int i;
@@ -23,6 +24,9 @@ void printarray(int a[], int n)
 
 	printf("\n");
 }
+#else
+void printarray(int a[], int n) { }
+#endif
 
 void start_timestamp()
 {
