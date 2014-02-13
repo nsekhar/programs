@@ -10,6 +10,7 @@ int main()
 {
 	FILE *f;
 	int *a, i = 0;
+	time_t t;
 
 	f = fopen("data", "r");
 	if (!f)
@@ -23,7 +24,10 @@ int main()
 		i++;
 	}
 
+	start_timestamp();
 	insertsort(a, i - 1);
+	t = stop_timestamp();
+	printf("Sorting complete in %lu microseconds\n", t);
 	printarray(a, i - 1);
 
 	free(a);
