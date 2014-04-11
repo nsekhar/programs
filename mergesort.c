@@ -43,9 +43,10 @@ static int *merge (int *a, int an, int *b, int bn)
 
 int *mergesort(int *a, int n)
 {
+	int odd = n % 2;
+
 	if (n == 1)
 		return a;
 
-
-	return merge(mergesort(a, n/2), n/2, mergesort(a + n/2, n/2), n/2);
+	return merge(mergesort(a, n/2), n/2, mergesort(a + n/2, n/2 + odd), n/2 + odd);
 }
