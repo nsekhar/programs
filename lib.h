@@ -11,6 +11,7 @@ void swap(int *a, int *b);
 void printarray(int a[], int n);
 void start_timestamp();
 time_t stop_timestamp();
+int *mergesort (int *a, int n);
 
 #define PERROR_RET(fmt, arg...)	do {				\
 		int errsv = errno;				\
@@ -19,3 +20,5 @@ time_t stop_timestamp();
 	} while (0);
 
 #endif
+
+#define ARRAY_SIZE(a, type) (sizeof(a)/sizeof(type))
