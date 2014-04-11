@@ -46,7 +46,6 @@ int *mergesort(int *a, int n)
 	if (n == 1)
 		return a;
 
-	printarray (a, n);
 
 	return merge(mergesort(a, n/2), n/2, mergesort(a + n/2, n/2), n/2);
 }
