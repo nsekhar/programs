@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include <sys/time.h>
 
@@ -12,6 +13,7 @@ void printarray(int a[], int n);
 void start_timestamp();
 time_t stop_timestamp();
 int *mergesort (int *a, int n);
+bool binarysearch(int *a, int low, int high, int key);
 
 #define PERROR_RET(fmt, arg...)	do {				\
 		int errsv = errno;				\
